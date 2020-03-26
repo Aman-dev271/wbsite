@@ -19,7 +19,6 @@
 <body>
   {% include "basic/navbar-dark.html" %}
 
- 
   <div class="main-content">
     <!-- Header (v10) -->
     <section class="slice slice-xl bg-gradient-primary" style="padding-bottom: 150px;">
@@ -64,38 +63,20 @@
     <section class="slice slice-lg" id="port">
       <div class="container">
         <div class="mb-5 text-center">
-          <h3 class=" mt-4">Our projects</h3>
+          <h3 class=" mt-4">Our projects 
+
+          </h3>
           <div class="fluid-paragraph mt-3">
             <p class="lead lh-180">Always looking for better ways to do things, innovate and help people achieve their goals.</p>
           </div>
         </div>
         <div class="row">
+          
+          {% for abc in obj %}
           <div class="col-lg-6">
             <div class="card hover-shadow-lg hover-translate-y-n10">
               <div class="card-image p-0">
-                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/img-1-1000x900.jpg' %}" class="card-img">
-              </div>
-              <span class="mask bg-dark opacity-3"></span>
-              <span class="mask hover-mask bg-gradient-primary opacity-4"></span>
-              <div class="card-img-overlay d-flex flex-column">
-                <div class="col pt-2">
-                  <h3 class="text-capitalize mb-1">
-                    <a href="#" class="text-white">The Pineapple's story</a>
-                  </h3>
-                  <h6 class="text-white">
-                    <a href="#" class="text-white border-bottom border-white">Identity &amp; Web Design</a>
-                  </h6>
-                </div>
-                <div class="w-100 mt-auto text-right">
-                  <span class="text-white font-weight-bold">Jun 20, 2019</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card hover-shadow-lg hover-translate-y-n10">
-              <div class="card-image p-0">
-                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/img-2-1000x900.jpg' %}" class="card-img">
+                <img alt="Image placeholder" src="{{ abc.img.url }}" class="card-img">
               </div>
               <span class="mask bg-dark opacity-3"></span>
               <span class="mask hover-mask bg-gradient-primary opacity-4"></span>
@@ -114,53 +95,9 @@
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card hover-shadow-lg hover-translate-y-n10">
-              <div class="card-image p-0">
-                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/img-3-1000x900.jpg' %}" class="card-img">
-              </div>
-              <span class="mask bg-dark opacity-3"></span>
-              <span class="mask hover-mask bg-gradient-primary opacity-4"></span>
-              <div class="card-img-overlay d-flex flex-column">
-                <div class="col pt-2">
-                  <h3 class="text-capitalize mb-1">
-                    <a href="#" class="text-white">Golden beauty</a>
-                  </h3>
-                  <h6 class="text-white">
-                    <a href="#" class="text-white border-bottom border-white">Marketing</a>
-                  </h6>
-                </div>
-                <div class="w-100 mt-auto text-right">
-                  <span class="text-white font-weight-bold">May 18, 2019</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card hover-shadow-lg hover-translate-y-n10">
-              <div class="card-image p-0">
-                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/img-4-1000x900.jpg' %}" class="card-img">
-              </div>
-              <span class="mask bg-dark opacity-3"></span>
-              <span class="mask hover-mask bg-gradient-primary opacity-4"></span>
-              <div class="card-img-overlay d-flex flex-column">
-                <div class="col pt-2">
-                  <h3 class="text-capitalize mb-1">
-                    <a href="#" class="text-white">Living dangerously</a>
-                  </h3>
-                  <h6 class="text-white">
-                    <a href="#" class="text-white border-bottom border-white">Management</a>
-                  </h6>
-                </div>
-                <div class="w-100 mt-auto text-right">
-                  <span class="text-white font-weight-bold">Apr 23, 2019</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    
         <div class="text-center mt-5">
           </a>
         </div>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Category, Product
+from .models import Category, Product, Portfolio
 from django.shortcuts import get_object_or_404
 
 def home(request):
@@ -28,6 +28,11 @@ def single_product(request, id):
 
 def contact(request):
     return render(request, 'app/contact.html', {})
+    
+def services(request):
+    return render(request, 'app/services.html', {})
 
 def portfolio(request):
-    return render(request, 'app/portfolio.html', {})
+    port = Portfolio.objects.all()
+    context = {'obj': port,}
+    return render(request, 'app/portfolio.html', context)
